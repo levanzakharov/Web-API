@@ -1,0 +1,19 @@
+table{
+    border: 1px solid black;
+    background-color: burlywood;
+}
+th{
+    border: 1px solid black;
+}
+
+.Select_Delete{
+    visibility: hidden;
+}
+
+.Insert{
+    visibility: hidden;
+}
+
+.update{
+    visibility: hidden;
+}

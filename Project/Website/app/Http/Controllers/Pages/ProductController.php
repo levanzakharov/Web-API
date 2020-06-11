@@ -50,7 +50,6 @@ class ProductController extends Controller
             'ProductName' => 'required',
             'Id_Brand' => 'required|numeric',
             'Id_Category' => 'required|numeric',
-            'Model_Year' => 'required|numeric',
             'Price' => 'required|numeric',
             'Content' => 'required',
             'Discount' => 'required',
@@ -60,19 +59,17 @@ class ProductController extends Controller
         $ProductName = $request->input('ProductName');
         $Id_Brand = $request->input('Id_Brand');
         $Id_Category = $request->input('Id_Category');
-        $Model_Year = $request->input('Model_Year');
         $Price = $request->input('Price');
         $Content = $request->input('Content');
         $Discount = $request->input('Discount');
         $Photo = $request->input('Photo');
 
 
-        DB::table('Products')->insert(
+        DB::table('Product')->insert(
             [
                 'ProductName' => $ProductName,
                 'Id_Brand' => $Id_Brand,
                 'Id_Category' => $Id_Category,
-                'Model_Year' => $Model_Year,
                 'Price' => $Price,
                 'Content' => $Content,
                 'Discount' => $Discount,
@@ -125,7 +122,6 @@ class ProductController extends Controller
         $ProductName = $request->input('ProductName');
         $Id_Brand = $request->input('Id_Brand');
         $Id_Category = $request->input('Id_Category');
-        $Model_Year = $request->input('Model_Year');
         $Price = $request->input('Price');
         $Content = $request->input('Content');
         $Discount = $request->input('Discount');
@@ -135,7 +131,6 @@ class ProductController extends Controller
             'ProductName' => $ProductName,
                 'Id_Brand' => $Id_Brand,
                 'Id_Category' => $Id_Category,
-                'Model_Year' => $Model_Year,
                 'Price' => $Price,
                 'Content' => $Content,
                 'Discount' => $Discount,

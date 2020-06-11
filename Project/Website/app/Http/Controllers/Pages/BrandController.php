@@ -48,7 +48,7 @@ class BrandController extends Controller
 
         $BrandName = $request->input('BrandName');
 
-        DB::table('brands')->insert(
+        DB::table('brand')->insert(
             [
                 'BrandName' => $BrandName,
             ]
@@ -97,7 +97,7 @@ class BrandController extends Controller
             'BrandName' => $BrandName
         ];
 
-        DB::table('brands')->where('Id_Brand', $id)->update($data);
+        DB::table('brand')->where('Id_Brand', $id)->update($data);
 
         return back();
     }

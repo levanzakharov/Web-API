@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Product extends Migration
+class AddVotesToOrderstatusTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class Product extends Migration
      */
     public function up()
     {
-
-        Schema::create('Category', function (Blueprint $table) {
-            $table->id('Id_Category');
-            $table->string('CategoryName');
+        Schema::create('orderstatus', function (Blueprint $table) {
+            $table->id('Id_OrderStatus');
+            $table->string('OrderStatusName');
         });
     }
 
@@ -27,6 +26,8 @@ class Product extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Category');
+        Schema::table('orderstatus', function (Blueprint $table) {
+            //
+        });
     }
 }

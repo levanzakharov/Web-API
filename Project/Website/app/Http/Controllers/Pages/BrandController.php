@@ -48,7 +48,7 @@ class BrandController extends Controller
 
         $BrandName = $request->input('BrandName');
 
-        DB::table('brand')->insert(
+        Brand::insert(
             [
                 'BrandName' => $BrandName,
             ]

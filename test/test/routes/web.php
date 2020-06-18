@@ -20,14 +20,4 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-// Route::get('/', function () {
-//     return view('CustomView', ['name' => 'James']);
-//     return view();
-// });
-
-Route::get('/', 'PagesController@index');
-
-Route::get('/about', 'PagesController@about');
-
-Route::resource('post', 'PostsController');
+Route::get('/Admin/Flight', 'AdminController@Flight')->name('Admin_Flight');

@@ -11,6 +11,8 @@
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
+                        <p>user: Admin@gmail.com <br> password: Admin1234</p>
+
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
